@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "category": "AI Agents",
+    "title": "SmashCore AI",
+    "description": "An autonomous agent for competitive gaming analysis and strategy.",
+    "longDescription": "SmashCore AI processes thousands of gameplay videos to identify optimal strategies, character matchups, and player habits. It uses a combination of computer vision and reinforcement learning to provide actionable insights for professional gamers.",
+    "imageUrl": "https://images.unsplash.com/photo-1677756119517-756a188d2278?q=80&w=800&auto=format&fit=crop",
+    "tags": ["Computer Vision", "Reinforcement Learning", "Python"]
+  },
+  {
+    "id": 2,
+    "category": "Projects",
+    "title": "Generative Art Platform",
+    "description": "A web-based platform for creating unique art using generative models.",
+    "longDescription": "This platform allows users to input text prompts and style guides to generate high-resolution artwork. It utilizes fine-tuned diffusion models and offers a marketplace for users to sell their creations as NFTs.",
+    "imageUrl": "https://images.unsplash.com/photo-1694932172345-690559a161e1?q=80&w=800&auto=format&fit=crop",
+    "tags": ["React", "Node.js", "Stable Diffusion", "Web3"]
+  },
+  {
+    "id": 3,
+    "category": "Case Studies",
+    "title": "E-commerce Automation",
+    "description": "Automating inventory management for a large online retailer.",
+    "longDescription": "Developed an AI-powered system that predicts sales trends, automates reordering processes, and optimizes stock levels across multiple warehouses. The solution reduced stockouts by 40% and carrying costs by 25%.",
+    "imageUrl": "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=800&auto=format&fit=crop",
+    "tags": ["Time Series Forecasting", "LLMs", "SQL", "Automation"]
+  },
+  {
+    "id": 4,
+    "category": "AI Agents",
+    "title": "MarketMind",
+    "description": "AI agent for real-time financial market sentiment analysis.",
+    "longDescription": "MarketMind scrapes news articles, social media, and financial reports to provide a real-time sentiment score for various assets. It helps traders make informed decisions by filtering out noise and highlighting key market-moving information.",
+    "imageUrl": "https://images.unsplash.com/photo-1642142343212-a5b037304bee?q=80&w=800&auto=format&fit=crop",
+    "tags": ["NLP", "Data Scraping", "API", "Real-time"]
+  }
+]

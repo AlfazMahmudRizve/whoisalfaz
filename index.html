@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>whoisalfaz.me | Alfaz Mahmud Rizve's Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A personal portfolio website for Alfaz, showcasing AI agents, businesses, and ideas brought to reality." />
+    <meta name="keywords" content="Alfaz Mahmud Rizve, AI developer, AI agent, portfolio, web developer, entrepreneur, AI solutions" />
+    <meta name="author" content="Alfaz Mahmud Rizve" />
+    <link rel="canonical" href="https://whoisalfaz.me/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://whoisalfaz.me/" />
+    <meta property="og:title" content="whoisalfaz.me | Alfaz Mahmud Rizve's Portfolio" />
+    <meta property="og:description" content="A personal portfolio website for Alfaz, showcasing AI agents, businesses, and ideas brought to reality." />
+    <meta property="og:image" content="https://iili.io/Kc953In.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://whoisalfaz.me/" />
+    <meta property="twitter:title" content="whoisalfaz.me | Alfaz Mahmud Rizve's Portfolio" />
+    <meta property="twitter:description" content="A personal portfolio website for Alfaz, showcasing AI agents, businesses, and ideas brought to reality." />
+    <meta property="twitter:image" content="https://iili.io/Kc953In.jpg" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              'dark-bg': '#0a0a0a',
+              'dark-card': '#1a1a1a',
+              'primary': '#00f5d4',
+              'secondary': '#9b5de5',
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0",
+    "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.3.0",
+    "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^10.7.6",
+    "three": "https://aistudiocdn.com/three@^0.180.0",
+    "vite": "https://aistudiocdn.com/vite@^7.1.7",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.0.3"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
