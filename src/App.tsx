@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useCallback } from 'react';
 import Header from './components/layout/Header';
 import HeroSection from './components/sections/HeroSection';
@@ -15,7 +16,7 @@ const App: React.FC = () => {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
   const [isChatbotOpen, setChatbotOpen] = useState(false);
   const [typedSequence, setTypedSequence] = useState('');
-  const targetSequence = 'who is alfaz?';
+  const targetSequence = 'whoisalfaz?';
 
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -69,13 +70,13 @@ const App: React.FC = () => {
         }
         const config = await metaResponse.json();
         
-        if (!config.blogPostsUrl) {
-          throw new Error('Blog posts URL is not configured in metadata.json.');
+        if (!config.blogPostsUrl || config.blogPostsUrl.includes('PASTE_YOUR')) {
+          throw new Error('Blog posts URL is not configured. Please update public/metadata.json with your Gist Raw URL.');
         }
 
         const response = await fetch(config.blogPostsUrl);
         if (!response.ok) {
-          throw new Error('Failed to fetch blog posts from the specified URL.');
+          throw new Error('Failed to fetch blog posts. Please ensure the URL in public/metadata.json is a valid Raw Gist URL.');
         }
         const data: BlogPost[] = await response.json();
         setPosts(data.sort((a, b) => b.id - a.id));
@@ -129,25 +130,22 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-dark-bg text-gray-800 dark:text-gray-200 font-sans transition-colors duration-500">
+    <div className="bg-white dark:bg-dark-bg text-gray-900 dark:text-white font-sans">
       <Header theme={theme} toggleTheme={toggleTheme} onNavClick={handleNavClick} />
+      <main>
         {selectedPost ? (
-            <BlogPostPage post={selectedPost} onBack={() => setSelectedPost(null)} />
+          <BlogPostPage post={selectedPost} onBack={() => setSelectedPost(null)} />
         ) : (
-            <main>
-                <HeroSection />
-                <AboutSection />
-                <NowSection agentsBuilt={3} blogsPublished={posts.length} />
-                <ShowcaseSection />
-                <BlogSection 
-                    posts={posts}
-                    isLoading={isLoading}
-                    error={error}
-                    onPostSelect={setSelectedPost}
-                />
-                <ContactSection />
-            </main>
+          <>
+            <HeroSection />
+            <AboutSection />
+            <ShowcaseSection />
+            <NowSection agentsBuilt={4} blogsPublished={posts.length} />
+            <BlogSection posts={posts} isLoading={isLoading} error={error} onPostSelect={setSelectedPost} />
+            <ContactSection />
+          </>
         )}
+      </main>
       <Footer />
       {isChatbotOpen && <Chatbot onClose={() => setChatbotOpen(false)} />}
     </div>
