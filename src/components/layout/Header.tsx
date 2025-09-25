@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import ThemeToggle from './ThemeToggle';
 
@@ -58,15 +59,4 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme, onNavClick }) => {
             </a>
           ))}
         </nav>
-        <div className="flex items-center space-x-4">
-          <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-          <a href="#contact" onClick={(e) => { e.preventDefault(); handleLinkClick('#contact'); }} className="hidden sm:inline-block bg-gradient-to-r from-primary to-secondary text-white font-bold py-2 px-6 rounded-full hover:scale-105 transform transition-transform duration-300">
-            Let's Talk
-          </a>
-        </div>
-      </div>
-    </header>
-  );
-};
-
-export default Header;
+        <div className="flex items-center space-x-
